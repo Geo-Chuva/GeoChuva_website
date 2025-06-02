@@ -19,12 +19,25 @@ A landing page foi criada para:
 
 ## 🎮 Funcionalidades da Página
 
-Seção	Descrição
-💡 Hero Section	Apresentação do produto com CTA para saber mais ou começar o quiz
-🌊 Sobre	Explicação do problema das enchentes e como o GeoChuva atua
-📊 Funcionalidades	Descrição das soluções inteligentes: alertas, mapas, relatórios
-🧠 Quiz Educativo	Um quiz com perguntas objetivas sobre causas, prevenção e impacto das enchentes
-📝 Contato	Formulário para interessados em contratar ou apoiar
+* 💡 Hero Section
+
+Apresentação do produto com CTA para saber mais ou começar o quiz
+
+* 🌊 Sobre	
+
+Explicação do problema das enchentes e como o GeoChuva atua
+
+* 📊 Funcionalidades	
+
+Descrição das soluções inteligentes: alertas, mapas, relatórios
+
+* 🧠 Quiz Educativo	
+
+Um quiz com perguntas objetivas sobre causas, prevenção e impacto das enchentes
+
+* 📝 Contato	
+
+Formulário para interessados em contratar ou apoiar
 
 ## 🧪 Quiz: Teste seus conhecimentos!
 O quiz é uma das principais ferramentas de conscientização do site.
