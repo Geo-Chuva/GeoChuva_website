@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* inicio header */
+.header{
+    background-image: url(../assets/img_fundo.jpg.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 70px;
+    position: relative;
+    z-index: 1;
+    font-family:"Abhaya Libre", sans-serif;
+}
+
+.navbar{
+    display: flex; 
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    align-items: center;
+    justify-content: space-around
+}
+
+.img-logo{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin-left: 20px;
+}
+.navbar ul li a {
+    text-decoration: none;
+    padding: 8px 12px;
+    color: var(--color-text-header);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* final header */
