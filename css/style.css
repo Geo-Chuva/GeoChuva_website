@@ -7,3 +7,60 @@
     --color-text-header: #000000; 
     --color-text: #FFFFFF;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#inicio{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+.carrossel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+.legenda {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color:#f2a41f ; 
+  font-size: 3rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.legenda.ativo {
+  opacity: 1;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.ativo {
+  opacity: 1;
+}
