@@ -38,7 +38,7 @@ function proximoSlide() {
   if (indexAtual >= totalSlides) {
     ciclos++;
     if (ciclos === 1) { 
-      window.location.href = "sobre.html";
+      window.location.href = "./pages/sobre.html";
       return;
     }
     indexAtual = 0;
