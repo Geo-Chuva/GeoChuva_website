@@ -48,3 +48,6 @@ function proximoSlide() {
 
 mostrarSlide(indexAtual); 
 setInterval(proximoSlide, 4000);
+
+
+//
