@@ -2,7 +2,61 @@
 
 *{
     font-family: "Montagu Slab", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+:root{
+    --background-color: #E2E6F9;
+    --color-button: #5A0613;
+    --color-title: #05111F;
+    --color-topicos:#1F69B4;
+    --color-campus: #4ABED9;
+    --color-text-header: #000000; 
+    --color-text: #FFFFFF;
+    --color-footer: #072D5B;
+}
+
+/* inicio header */
+.header{
+    background-image: url(../assets/img_fundo.jpg.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 70px;
+    position: relative;
+    z-index: 1;
+    font-family:"Abhaya Libre", sans-serif;
+}
+
+.navbar{
+    display: flex; 
+    height: 100%;
+    z-index: -1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-logo{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin-right: 30px;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--color-text-header);
+    font-weight: bold;
+    font-size: 18px;
+
+}
+/* final header */
 
 .containerInicial {
     display: flex;
@@ -78,22 +132,22 @@
     justify-content: center;
 } 
 
+/* inicio quiz */
 .containerQuiz {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin: 40px 0 60px 0;
+    margin-top: 40px;
 }
 
 .quizBox {
-    background: #1F69B4;
-    color: #fff;
+    background: var(--color-topicos);
+    color: var(--color-text);
     border-radius: 16px;
     padding: 32px 40px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
     text-align: center;
-    max-width: 500px;
+    max-width: 700px;
     width: 100%;
 }
 
@@ -122,24 +176,37 @@
 .quizBox button[type="submit"] {
     margin-top: 18px;
     padding: 10px 32px;
-    background: #f2a41f;
-    color: #1F69B4;
+    background: var(--color-topicos);
+    color: var(--color-text);
     border: none;
     border-radius: 6px;
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.2s;
 }
 
 .quizBox button[type="submit"]:hover {
-    background: #ffd580;
+    background: var(--color-footer);
 }
 
 #quizFeedback {
     margin-top: 18px;
     font-size: 1.1rem;
     font-weight: bold;
+}
+
+footer{
+    margin-top: 40px;
+    height: auto;
+    min-height: 100px;
+    width: 100%;
+    background-color: var(--color-footer);
+}
+footer p{
+    text-align: center;
+    color: var(--color-text-header);
+    font-size: 1.2rem;
+    padding: 20px 0;
 }
 
 
