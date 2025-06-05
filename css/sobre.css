@@ -17,6 +17,51 @@
     --color-footer: #072D5B;
 }
 
+/* ----- MENU HAMBÚRGUER ----- */
+.hamburger {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;         /* Só mostrará no mobile */
+    color: inherit;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Mobile first até 768 px */
+@media (max-width: 768px) {
+    .hamburger {          /* Exibe o botão */
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;        /* altura aproximada do header */
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--nav-bg, #fff);
+        padding: 1rem 0;
+        display: none;    /* escondido por padrão */
+    }
+
+    .nav-links.active {   /* classe acionada via JS */
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
 /* inicio header */
 .header{
     background-image: url(../assets/img_fundo.jpg.jpeg);
