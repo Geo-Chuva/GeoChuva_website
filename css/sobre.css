@@ -195,6 +195,7 @@
     font-weight: bold;
 }
 
+/* footer */
 footer{
     margin-top: 40px;
     height: auto;
@@ -208,7 +209,24 @@ footer p{
     font-size: 1.2rem;
     padding: 20px 0;
 }
-
+/* botoes  */
+.temaBotoes {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 24px 0;
+}
+.temaBotoes button {
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    background: #1F69B4;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
 
 @media (max-width: 1070px) {
 
