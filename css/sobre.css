@@ -227,7 +227,7 @@ footer{
 }
 footer p{
     text-align: center;
-    color: var(--color-text-header);
+    color: var(--color-text);
     font-weight: bold;
     font-size: 1.7rem;
     padding: 20px 0;

@@ -1,61 +1,40 @@
-window.onload = function(){
+window.onload = function() {
+    const temaSalvo = localStorage.getItem('temaGeoChuva') || 'claro';
+    mudarTema(temaSalvo);
+
+   
     const intro = document.getElementById("inicio");
-
-    setTimeout(()=>{
-        intro.classList.add("efeito-out")
+    const content = document.getElementById("content");
+    if (intro && content) {
         setTimeout(()=>{
-            intro.style.display ="none";
-            content.classList.remove("hidden")
-            content.classList.add("efeito-in")
-        },1000)
-    },120000)
-    mudarTema('claro');
-}
-
-function trocar(cor){
-    document.body.style.background=cor;
-}
-
-let indexAtual = 0;
-const slides = document.querySelectorAll('.slide');
-const legendas = document.querySelectorAll('.legenda');
-const totalSlides = slides.length;
-let ciclos = 0; 
-
-function mostrarSlide(index) {
-  // Atualiza slides
-  slides.forEach(slide => slide.classList.remove('ativo'));
-  slides[index].classList.add('ativo');
-
-  // Atualiza legendas
-  legendas.forEach(legenda => legenda.classList.remove('ativo'));
-  setTimeout(() => {
-    legendas[index].classList.add('ativo');
-  }, 1000); 
-}
-
-function proximoSlide() {
-  indexAtual++;
-  if (indexAtual >= totalSlides) {
-    ciclos++;
-    if (ciclos === 1) { 
-      window.location.href = "./pages/sobre.html";
-      return;
+            intro.classList.add("efeito-out")
+            setTimeout(()=>{
+                intro.style.display ="none";
+                content.classList.remove("hidden")
+                content.classList.add("efeito-in")
+            },1000)
+        },120000)
     }
-    indexAtual = 0;
-  }
-  mostrarSlide(indexAtual);
+    if (typeof mostrarSlide === "function") {
+        mostrarSlide(indexAtual); 
+        setInterval(proximoSlide, 4000);
+    }
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
 }
-
-mostrarSlide(indexAtual); 
-setInterval(proximoSlide, 4000);
-
-
-//mudar tema
 
 //Mudar tema
 
 function mudarTema(tema) {
+    // Salva o tema escolhido
+    localStorage.setItem('temaGeoChuva', tema);
+
     if (tema === 'claro') {
         document.documentElement.style.setProperty('--background-color', '');
         document.documentElement.style.setProperty('--color-topicos','');
@@ -83,10 +62,63 @@ function mudarTema(tema) {
     if(btn) btn.classList.add('ativo');
 }
 
+let indexAtual = 0;
+const slides = document.querySelectorAll('.slide');
+const legendas = document.querySelectorAll('.legenda');
+const totalSlides = slides.length;
+let ciclos = 0; 
 
-const hamburger = document.getElementById('hamburger');
-const navLinks  = document.getElementById('navLinks');
+function mostrarSlide(index) {
+  slides.forEach(slide => slide.classList.remove('ativo'));
+  slides[index].classList.add('ativo');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+  legendas.forEach(legenda => legenda.classList.remove('ativo'));
+  setTimeout(() => {
+    legendas[index].classList.add('ativo');
+  }, 1000); 
+}
+
+function proximoSlide() {
+  indexAtual++;
+  if (indexAtual >= totalSlides) {
+    ciclos++;
+    if (ciclos === 1) { 
+      window.location.href = "./pages/sobre.html";
+      return;
+    }
+    indexAtual = 0;
+  }
+  mostrarSlide(indexAtual);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const temaSalvo = localStorage.getItem('temaGeoChuva') || 'claro';
+    mudarTema(temaSalvo);
+
+    const intro = document.getElementById("inicio");
+    const content = document.getElementById("content");
+    if (intro && content) {
+        setTimeout(()=>{
+            intro.classList.add("efeito-out")
+            setTimeout(()=>{
+                intro.style.display ="none";
+                content.classList.remove("hidden")
+                content.classList.add("efeito-in")
+            },1000)
+        },120000)
+    }
+
+    if (typeof mostrarSlide === "function") {
+        mostrarSlide(indexAtual); 
+        setInterval(proximoSlide, 4000);
+    }
+
+    // Menu hamburguer
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
 });
