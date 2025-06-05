@@ -1,0 +1,341 @@
+*{
+    font-family: "Montagu Slab", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: #E2E6F9;
+    --color-button: #5A0613;
+    --color-title: #05111F;
+    --color-topicos:#1F69B4;
+    --color-campus: #4ABED9;
+    --color-text-header: #000000; 
+    --color-text: #FFFFFF;
+    --color-footer: #072D5B;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerQuiz {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+/* ----- MENU HAMBÚRGUER ----- */
+.hamburger {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;         
+    color: inherit;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+@media (max-width: 768px) {
+    .hamburger {          
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;        
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--nav-bg, #fff);
+        padding: 1rem 0;
+        display: none;    
+    }
+
+    .nav-links.active {   
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* inicio header */
+.header{
+    background-image: url(../assets/img_fundo.jpg.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 70px;
+    position: relative;
+    z-index: 1;
+    font-family:"Abhaya Libre", sans-serif;
+}
+
+.navbar{
+    display: flex; 
+    height: 100%;
+    z-index: -1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-logo{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 5rem;
+    margin-right: 30px;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--color-text-header);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* botoes  */
+.temaBotoes {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 24px 10px;
+}
+.temaBotoes button {
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    background: var(--color-topicos);
+    color: var(--color-text);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.temaBotoes button.ativo[data-tema="claro"] {
+    background: #00DDFF;
+    color: #000000;
+    border: 2px solid #1F69B4;
+}
+.temaBotoes button.ativo[data-tema="escuro"] {
+    background: #222831;
+    color: #fff;
+    border: 2px solid #f2a41f;
+}
+.temaBotoes button.ativo[data-tema="azul"] {
+    background: #00509e;
+    color: #fff;
+    border: 2px solid #f2a41f;
+}
+/* final header */
+
+
+.contador-perguntas {
+    display: block;
+    font-size: 1rem;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.quizBox {
+    background: var(--color-topicos);
+    color: var(--color-text);
+    border-radius: 16px;
+    padding: 32px 40px;
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.quizBox h2 {
+    margin-bottom: 24px;
+    font-size: 2rem;
+}
+
+#quizPergunta p {
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.quizOpcoes {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.quizOpcoes label {
+    display: block;
+    margin: 12px 0;
+    padding: 12px 16px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.quizOpcoes label:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.quizOpcoes input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #f2a41f;
+}
+
+.quizBox button[type="submit"] {
+    margin-top: 18px;
+    padding: 12px 32px;
+    background: var(--color-title);
+    color: var(--color-text);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quizBox button[type="submit"]:hover {
+    background: #24a057;
+    transform: translateY(-2px);
+}
+
+.resultado-quiz {
+    animation: fadeIn 0.5s ease;
+}
+
+.resultado-quiz h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.resultado-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 24px 0;
+}
+
+.resultado-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px 25px;
+    margin: 10px;
+    min-width: 120px;
+}
+
+.resultado-label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.resultado-valor {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.acertos {
+    color: #2ecc71;
+}
+
+.erros {
+    color: #e74c3c;
+}
+
+.pontuacao {
+    color: #f2a41f;
+}
+
+.feedback-excelente {
+    color: #2ecc71;
+    font-weight: 600;
+}
+
+.feedback-bom {
+    color: #f2a41f;
+    font-weight: 600;
+}
+
+.feedback-regular {
+    color: #f39c12;
+    font-weight: 600;
+}
+
+.feedback-ruim {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.btn-reiniciar {
+    margin-top: 20px;
+    padding: 12px 32px;
+    background: #2ecc71;
+    color: var(--color-text);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-reiniciar:hover {
+    background: #24a057;
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .quizBox {
+        padding: 24px 20px;
+    }
+    
+    .quizBox h2 {
+        font-size: 1.6rem;
+    }
+    
+    #quizPergunta p {
+        font-size: 1.1rem;
+    }
+    
+    .quizOpcoes label {
+        font-size: 1rem;
+        padding: 10px 12px;
+    }
+    
+    .resultado-stats {
+        flex-direction: column;
+    }
+    
+    .resultado-item {
+        margin: 5px 0;
+        width: 100%;
+    }
+}

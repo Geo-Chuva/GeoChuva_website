@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/quiz.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="../index.html">
+                <img class="img-logo" src="../assets/logo_GeoChuva.jpg.jpeg" alt="Logo Geo Chuva" width="62">
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu">&#9776;</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/sobre.html">Sobre Nós</a></li>
+                <li><a href="./cadastro.html">Cadastre-se</a></li>
+                <li class="temaBotoes">
+                    <button onclick="mudarTema('claro')" data-tema="claro">Tema Claro</button>
+                    <button onclick="mudarTema('escuro')" data-tema="escuro">Tema Escuro</button>
+                    <button onclick="mudarTema('azul')" data-tema="azul">Tema Azul</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+        <section class="containerQuiz">
+        <div class="quizBox">
+            <h2>Quiz GeoChuva</h2>
+            <form id="quizForm">
+                <div id="quizPergunta">
+                </div>
+                <div class="quizOpcoes">
+                </div>
+                <button type="submit">Próxima Pergunta</button>
+            </form>
+            <div id="quizFeedback"></div>
+        </div>
+    </section>
+<script src="../js/quiz.js"></script>
+<script src="../js/menu.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>
