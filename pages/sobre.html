@@ -11,15 +11,19 @@
 </head>
 <body>
     <!--Header-->
- <header class="header">
+    <header class="header">
         <div class="navbar">
             <img class="img-logo" src="../assets/logo_GeoChuva.jpg.jpeg" alt="Logo Geo Chuva" width="62px"> 
             <li><a href="../index.html">Home</a></li>
             <ul>
                 <li><a href="#">Sobre Nós</a></li>
                 <li><a href="./cadastro.html">Cadastre-se</a></li>
-
             </ul>
+            <div class="temaBotoes">
+                <button onclick="mudarTema('claro')">Tema Claro</button>
+                <button onclick="mudarTema('escuro')">Tema Escuro</button>
+                <button onclick="mudarTema('azul')">Tema Azul</button>
+            </div>
         </div>
     </header>
 
@@ -115,7 +119,7 @@
     <footer>
         <p>Não deixe que a chuva estrague o seu dia. Junte-se a nós e faça parte da mudança para uma São Paulo mais segura e preparada!</p>
     </footer>
-    
+    <script src="../js/script.js"></script>
 
 </body>
 </html>
