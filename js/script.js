@@ -50,7 +50,7 @@ mostrarSlide(indexAtual);
 setInterval(proximoSlide, 4000);
 
 
-//
+//mudar tema
 
 
 function mudarTema(tema) {
@@ -71,3 +71,14 @@ function mudarTema(tema) {
         document.body.style.background = '#cce6ff';
     }
 }
+
+
+// menu hamburguer 
+
+/* ---------- MENU HAMBÚRGUER ---------- */
+const hamburger = document.getElementById('hamburger');
+const navLinks  = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
