@@ -190,7 +190,8 @@ body{
 }
 
 .formulario label {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
     margin-bottom: 6px;
     color: var(--color-text-header, #002b54);
 }
@@ -204,7 +205,7 @@ body{
     border-radius: 8px;
     font-size: 1.1rem;
     margin-bottom: 18px;
-    background: #f8fbff;
+    background: var(--color-text);
     color: var(--color-text-header);
 }
 
@@ -227,7 +228,6 @@ body{
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    transition: background 0.2s;
     max-width: 200px;
 }
 
@@ -235,6 +235,23 @@ body{
     background: var(--color-campus);
 }
 
+.formulario .checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.formulario .checkbox-row input[type="checkbox"] {
+    margin: 0;
+}
+
+.formulario .checkbox-row p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: semi-bold;
+    color: var(--color-text-header);
+}
 
 @media (max-width: 900px) {
     .main-content {

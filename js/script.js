@@ -82,3 +82,11 @@ function mudarTema(tema) {
     const btn = document.querySelector(`.temaBotoes button[data-tema="${tema}"]`);
     if(btn) btn.classList.add('ativo');
 }
+
+
+const hamburger = document.getElementById('hamburger');
+const navLinks  = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});

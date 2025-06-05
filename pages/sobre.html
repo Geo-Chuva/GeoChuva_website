@@ -5,24 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre</title>
     <link rel="stylesheet" href="../css/sobre.css">
+    <link rel="stylesheet" href="../css/menu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="navbar">
-            <img class="img-logo" src="../assets/logo_GeoChuva.jpg.jpeg" alt="Logo Geo Chuva" width="62px"> 
-            <ul>
+        <nav class="navbar">
+            <a href="../index.html">
+                <img class="img-logo" src="../assets/logo_GeoChuva.jpg.jpeg" alt="Logo Geo Chuva" width="62">
+            </a>
+
+            <!-- Botão hambúrguer (visível só no mobile) -->
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu">&#9776;</button>
+
+            <!-- Navegação -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="#">Sobre Nós</a></li>
                 <li><a href="./cadastro.html">Cadastre-se</a></li>
+                <li class="temaBotoes">
+                    <button onclick="mudarTema('claro')">Tema Claro</button>
+                    <button onclick="mudarTema('escuro')">Tema Escuro</button>
+                    <button onclick="mudarTema('azul')">Tema Azul</button>
+                </li>
             </ul>
-            <div class="temaBotoes">
-                <button onclick="mudarTema('claro')" data-tema="claro">Tema Claro</button>
-                <button onclick="mudarTema('escuro')" data-tema="escuro">Tema Escuro</button>
-                <button onclick="mudarTema('azul')" data-tema="azul">Tema Azul</button>
-            </div>
-        </div>
+        </nav>
     </header>
 
     <!---------->
@@ -89,5 +98,6 @@
         <p>Não deixe que a chuva estrague o seu dia. Junte-se a nós e faça parte da mudança para uma São Paulo mais segura e preparada!</p>
     </footer>
     <script src="../js/script.js"></script>
+    <script src="../js/menu.js"></script>
 </body>
 </html>
