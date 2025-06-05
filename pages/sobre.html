@@ -19,9 +19,9 @@
                 <li><a href="./cadastro.html">Cadastre-se</a></li>
             </ul>
             <div class="temaBotoes">
-                <button onclick="mudarTema('claro')">Tema Claro</button>
-                <button onclick="mudarTema('escuro')">Tema Escuro</button>
-                <button onclick="mudarTema('azul')">Tema Azul</button>
+                <button onclick="mudarTema('claro')" data-tema="claro">Tema Claro</button>
+                <button onclick="mudarTema('escuro')" data-tema="escuro">Tema Escuro</button>
+                <button onclick="mudarTema('azul')" data-tema="azul">Tema Azul</button>
             </div>
         </div>
     </header>
@@ -84,37 +84,8 @@
             </div>
         </section>
     </main>
-    <!-- quiz -->
-    <section class="containerQuiz">
-        <div class="quizBox">
-            <h2>Quiz GeoChuva</h2>
-            <form id="quizForm">
-                <div id="quizPergunta">
-                    <p>Qual destas ações ajuda a prevenir enchentes?</p>
-                </div>
-                <div class="quizOpcoes">
-                    <label>
-                        <input type="radio" name="quizOpcao" value="a" required>
-                        Jogar lixo nas ruas
-                    </label><br>
-                    <label>
-                        <input type="radio" name="quizOpcao" value="b">
-                        Plantar árvores e cuidar dos rios
-                    </label><br>
-                    <label>
-                        <input type="radio" name="quizOpcao" value="c">
-                        Construir em áreas de risco
-                    </label><br>
-                    <label>
-                        <input type="radio" name="quizOpcao" value="d">
-                        Ignorar alertas de chuva forte
-                    </label>
-                </div>
-                <button type="submit">Enviar</button>
-            </form>
-            <div id="quizFeedback"></div>
-        </div>
-    </section>
+   
+
     <footer>
         <p>Não deixe que a chuva estrague o seu dia. Junte-se a nós e faça parte da mudança para uma São Paulo mais segura e preparada!</p>
     </footer>

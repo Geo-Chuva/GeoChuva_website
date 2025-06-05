@@ -52,18 +52,49 @@ body{
 .navbar ul{
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 5rem;
     margin-right: 30px;
 }
 .navbar ul li a {
     text-decoration: none;
     color: var(--color-text-header);
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.3rem;
+}
 
+/* botoes  */
+.temaBotoes {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 24px 10px;
+}
+.temaBotoes button {
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    background: var(--color-topicos);
+    color: var(--color-text);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.temaBotoes button.ativo[data-tema="claro"] {
+    background: #00DDFF;
+    color: #000000;
+    border: 2px solid #1F69B4;
+}
+.temaBotoes button.ativo[data-tema="escuro"] {
+    background: #222831;
+    color: #fff;
+    border: 2px solid #f2a41f;
+}
+.temaBotoes button.ativo[data-tema="azul"] {
+    background: #00509e;
+    color: #fff;
+    border: 2px solid #f2a41f;
 }
 /* final header */
-
 
 .main-content {
     display: flex;
@@ -104,7 +135,7 @@ body{
 .formulario {
     width: 100%;
     max-width: 70%;
-    background: var(--color-background-form, #e6eeff);
+    background: var(--background-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -157,24 +188,7 @@ body{
 .formulario button:hover {
     background: var(--color-campus);
 }
-/* botoes  */
-.temaBotoes {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin: 24px 0;
-}
-.temaBotoes button {
-    padding: 10px 22px;
-    border-radius: 6px;
-    border: none;
-    background: #1F69B4;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s;
-}
+
 
 @media (max-width: 900px) {
     .main-content {

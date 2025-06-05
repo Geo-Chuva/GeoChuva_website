@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="../css/cadastro.css">
 </head>
 <body>
- <header class="header">
+    <!--Header-->
+    <header class="header">
         <div class="navbar">
             <img class="img-logo" src="../assets/logo_GeoChuva.jpg.jpeg" alt="Logo Geo Chuva" width="62px"> 
             <ul>
@@ -15,9 +16,9 @@
                 <li><a href="#">Cadastre-se</a></li>
             </ul>
             <div class="temaBotoes">
-                <button onclick="mudarTema('claro')">Tema Claro</button>
-                <button onclick="mudarTema('escuro')">Tema Escuro</button>
-                <button onclick="mudarTema('azul')">Tema Azul</button>
+                <button onclick="mudarTema('claro')" data-tema="claro">Tema Claro</button>
+                <button onclick="mudarTema('escuro')" data-tema="escuro">Tema Escuro</button>
+                <button onclick="mudarTema('azul')" data-tema="azul">Tema Azul</button>
             </div>
         </div>
     </header>
@@ -42,5 +43,6 @@
             </div>
         </div>
     </main>
+    <script src="../js/script.js"></script>
 </body>
 </html>
