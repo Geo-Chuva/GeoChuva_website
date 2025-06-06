@@ -199,7 +199,7 @@ body{
 .formulario input[type="text"],
 .formulario input[type="email"],
 .formulario input[type="tel"] {
-    width: 90%;
+    width: 85%;
     padding: 12px;
     border: 2px solid var(--color-campus);
     border-radius: 8px;
@@ -251,6 +251,14 @@ body{
     font-size: 1rem;
     font-weight: semi-bold;
     color: var(--color-text-header);
+}
+
+.atencao-icone {
+    vertical-align: middle;
+    margin-left: 8px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
 }
 
 @media (max-width: 900px) {

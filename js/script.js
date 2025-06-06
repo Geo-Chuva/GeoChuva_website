@@ -148,3 +148,33 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+//erro ao enviar campus em branco
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector('.formulario');
+    if (form) {
+        const botao = form.querySelector('button[type="submit"]');
+        botao.addEventListener('click', function(e) {
+            e.preventDefault();
+            form.querySelectorAll('.atencao-icone').forEach(el => el.remove());
+            const campos = form.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"]');
+            let algumVazio = false;
+
+            campos.forEach(input => {
+                if (!input.value.trim()) {
+                    algumVazio = true;
+                    if (!input.nextElementSibling || !input.nextElementSibling.classList.contains('atencao-icone')) {
+                        const img = document.createElement('img');
+                        img.src = '../assets/atencao.png';
+                        img.alt = 'Atenção';
+                        img.className = 'atencao-icone';
+                        input.parentNode.insertBefore(img, input.nextSibling);
+                    }
+                }
+            });
+            if (!algumVazio) {
+                form.submit();
+            }
+        });
+    }
+});
