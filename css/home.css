@@ -41,14 +41,22 @@ body {
 
 .img-logo {
     border-radius: 50%;
+    
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 20rem;
     align-items: center;
 }
+.home{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 20px;
+}
+
 
 .nav-links a {
     text-decoration: none;
