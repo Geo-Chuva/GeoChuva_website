@@ -1,23 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoChuva</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>GeoChuva - Home</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="inicio">
-      <!-- carrosel topo -->
-    <div class="carrossel">
-      <img src="./assets/enchente.webp"  class="slide ativo" alt="Imagem 1">
-      <img src="./assets/resgate_bombeiros.jpg" class="slide" alt="Imagem 2">
-      <img src="./assets/img_fundo.jpg.jpeg" class="slide" alt="Imagem 3">
-      <p class="legenda">Quando a água sobe, cada segundo conta — receba o alerta antes da enchente chegar</p>
-      <p class="legenda">Eles salvam vidas, nós avisamos antes — a informação certa na hora certa pode evitar o pior</p>
-      <p class="legenda">A Tecnologia Que Vai Mudar Sua Relação com a Chuva em São Paulo</p>
-    </div>
-  </div> 
-<script src="./js/script.js"></script>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="./index.html">
+                <img class="img-logo" src="./assets/logo_GeoChuva.jpg.jpeg" alt="Logo Geo Chuva" width="62">
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu">&#9776;</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./pages/sobre.html">Sobre Nós</a></li>
+                <li><a href="./pages/cadastro.html">Cadastre-se</a></li>
+                <li class="temaBotoes">
+                    <button onclick="mudarTema('claro')" data-tema="claro">Tema Claro</button>
+                    <button onclick="mudarTema('escuro')" data-tema="escuro">Tema Escuro</button>
+                    <button onclick="mudarTema('azul')" data-tema="azul">Tema Azul</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner principal -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>GeoChuva</h1>
+                <p>Monitoramento inteligente de chuvas e prevenção de enchentes</p>
+                <a href="./pages/cadastro.html" class="cta-button">Cadastre-se Agora</a>
+            </div>
+        </section>
+
+        <!-- Seção 1: O problema que sua solução irá resolver -->
+        <section class="problem-section">
+            <h2>O Problema das Enchentes Urbanas</h2>
+            <div class="problem-container">
+                <div class="problem-content">
+                    <p>As enchentes urbanas são um dos maiores desafios enfrentados pelas grandes cidades brasileiras, especialmente em São Paulo. A cada temporada de chuvas, milhares de pessoas são afetadas por inundações que causam:</p>
+                    <ul>
+                        <li>Perdas materiais e financeiras</li>
+                        <li>Riscos à saúde e segurança</li>
+                        <li>Interrupção da mobilidade urbana</li>
+                        <li>Danos à infraestrutura pública</li>
+                    </ul>
+                    <p>A falta de informação em tempo real sobre áreas de risco e previsão de enchentes deixa a população vulnerável e sem tempo para tomar medidas preventivas.</p>
+                </div>
+                <div class="problem-image">
+                    <img src="./assets/enchente.webp" alt="Enchente em área urbana">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: As tecnologias que serão utilizadas -->
+        <section class="tech-section">
+            <h2>Tecnologias Avançadas para Prevenção</h2>
+            <div class="tech-container">
+                <div class="tech-image">
+                    <img src="./assets/tec.jpg.png" alt="Tecnologia avançada">
+                </div>
+                <div class="tech-content">
+                    <p>O GeoChuva utiliza um conjunto de tecnologias de ponta para monitorar, prever e alertar sobre riscos de enchentes:</p>
+                    <ul>
+                        <li><strong>Sensores IoT:</strong> Distribuídos em pontos estratégicos para monitoramento em tempo real</li>
+                        <li><strong>Inteligência Artificial:</strong> Algoritmos preditivos que analisam padrões de chuva e escoamento</li>
+                        <li><strong>Geolocalização:</strong> Mapeamento preciso de áreas de risco e rotas seguras</li>
+                        <li><strong>Big Data:</strong> Processamento de grandes volumes de dados meteorológicos e hidrológicos</li>
+                        <li><strong>Aplicativo Mobile:</strong> Interface intuitiva para acesso às informações e alertas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Os objetivos que pretendem alcançar -->
+        <section class="goals-section">
+            <h2>Nossos Objetivos</h2>
+            <div class="goals-container">
+                <div class="goal-card">
+                    <h3>Reduzir Danos</h3>
+                    <p>Diminuir em até 40% os prejuízos materiais causados por enchentes através de alertas antecipados.</p>
+                </div>
+                <div class="goal-card">
+                    <h3>Salvar Vidas</h3>
+                    <p>Proteger a população com informações precisas que permitam evacuação segura de áreas de risco.</p>
+                </div>
+                <div class="goal-card">
+                    <h3>Informar</h3>
+                    <p>Fornecer dados confiáveis sobre condições meteorológicas e hidrológicas em tempo real.</p>
+                </div>
+                <div class="goal-card">
+                    <h3>Integrar</h3>
+                    <p>Criar uma rede colaborativa entre cidadãos, autoridades e serviços de emergência.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 4: O público-alvo que será impactado -->
+        <section class="audience-section">
+            <h2>Quem Será Beneficiado</h2>
+            <div class="audience-container">
+                <div class="audience-content">
+                    <ul>
+                        <li><strong>Moradores de áreas de risco:</strong> Recebem alertas personalizados com tempo para proteger seus bens e familiares</li>
+                        <li><strong>Motoristas e usuários do transporte público:</strong> Podem planejar rotas alternativas e evitar áreas alagadas</li>
+                        <li><strong>Comerciantes:</strong> Conseguem proteger seus estabelecimentos e mercadorias com antecedência</li>
+                        <li><strong>Autoridades e serviços de emergência:</strong> Otimizam recursos e priorizam áreas críticas</li>
+                        <li><strong>Empresas de logística e entregas:</strong> Planejam rotas mais eficientes durante períodos de chuva</li>
+                    </ul>
+                </div>
+                <div class="audience-image">
+                    <img src="./assets/sobrenos3.png" alt="Público-alvo">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 5: Os benefícios oferecidos pela solução -->
+        <section class="benefits-section">
+            <h2>Benefícios do GeoChuva</h2>
+            <div class="benefits-container">
+                <div class="benefit-card">
+                    <img src="./assets/atencao.png" alt="Ícone de alerta">
+                    <h3>Alertas em Tempo Real</h3>
+                    <p>Receba notificações imediatas sobre riscos de enchentes na sua região.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="./assets/phoneGeoChuva.jpg.png" alt="Aplicativo móvel">
+                    <h3>Acesso Mobile</h3>
+                    <p>Acompanhe as informações pelo seu celular, onde quer que esteja.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="./assets/beneficios.jpg.png" alt="Economia">
+                    <h3>Economia</h3>
+                    <p>Reduza prejuízos materiais e financeiros causados por enchentes inesperadas.</p>
+                </div>
+                <div class="benefit-card">
+                    <img src="./assets/sobrenos4.png" alt="Tranquilidade">
+                    <h3>Tranquilidade</h3>
+                    <p>Tenha paz de espírito sabendo que será avisado com antecedência sobre riscos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 6: Como a solução ajudará no dia a dia dos usuários -->
+        <section class="daily-use-section">
+            <h2>Como o GeoChuva Facilita Seu Dia a Dia</h2>
+            <div class="daily-use-container">
+                <div class="daily-use-image">
+                    <img src="./assets/sobrenos5.png" alt="Uso diário">
+                </div>
+                <div class="daily-use-content">
+                    <ul>
+                        <li><strong>Planejamento diário:</strong> Consulte a previsão de chuvas e possíveis alagamentos antes de sair de casa</li>
+                        <li><strong>Alertas personalizados:</strong> Receba notificações específicas para os locais que você frequenta</li>
+                        <li><strong>Rotas seguras:</strong> Encontre caminhos alternativos para evitar áreas com risco de alagamento</li>
+                        <li><strong>Preparação antecipada:</strong> Tenha tempo para proteger sua casa, veículo e pertences</li>
+                        <li><strong>Compartilhamento de informações:</strong> Alerte familiares e amigos sobre riscos em suas áreas</li>
+                    </ul>
+                    <a href="./pages/cadastro.html" class="cta-button">Cadastre-se Agora</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./assets/logo_GeoChuva.jpg.jpeg" alt="Logo GeoChuva" width="50">
+                <p>GeoChuva &copy; 2025</p>
+            </div>
+            <div class="footer-links">
+                <a href="./index.html">Home</a>
+                <a href="./pages/sobre.html">Sobre Nós</a>
+                <a href="./pages/cadastro.html">Cadastre-se</a>
+                <a href="./pages/quiz.html">Quiz</a>
+            </div>
+            <div class="footer-social">
+                <p>Siga-nos nas redes sociais</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="Twitter">TW</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/menu.js"></script>
+    <script>
+        // Função para mudar o tema
+        function mudarTema(tema) {
+            // Salva o tema escolhido
+            localStorage.setItem('temaGeoChuva', tema);
+
+            if (tema === 'claro') {
+                document.documentElement.style.setProperty('--background-color', '');
+                document.documentElement.style.setProperty('--color-topicos','');
+                document.documentElement.style.setProperty('--color-text', '');
+                document.documentElement.style.setProperty('--color-title', '');
+                document.documentElement.style.setProperty('--color-text-header', '#00000');
+                document.body.style.background = '';
+            } else if (tema === 'escuro') {
+                document.documentElement.style.setProperty('--background-color', '#222831');
+                document.documentElement.style.setProperty('--color-topicos', '#393E46');
+                document.documentElement.style.setProperty('--color-text', '#FFFFFF');
+                document.documentElement.style.setProperty('--color-title', '#007A70');
+                document.documentElement.style.setProperty('--color-text-header', '#FFFFFF');
+                document.body.style.background = '#222831';
+            } else if (tema === 'azul') {
+                document.documentElement.style.setProperty('--background-color', '#cce6ff');
+                document.documentElement.style.setProperty('--color-topicos', '#007A70');
+                document.documentElement.style.setProperty('--color-text', '#FFFFFF');
+                document.documentElement.style.setProperty('--color-text-header', '');
+                document.documentElement.style.setProperty('--color-title', '');
+                document.body.style.background = '#cce6ff';
+            }
+            document.querySelectorAll('.temaBotoes button').forEach(btn => btn.classList.remove('ativo'));
+            const btn = document.querySelector(`.temaBotoes button[data-tema="${tema}"]`);
+            if(btn) btn.classList.add('ativo');
+        }
+
+        // Aplicar tema salvo quando a página carrega
+        document.addEventListener("DOMContentLoaded", function() {
+            const temaSalvo = localStorage.getItem('temaGeoChuva') || 'claro';
+            mudarTema(temaSalvo);
+
+            // Menu hamburguer
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
+
